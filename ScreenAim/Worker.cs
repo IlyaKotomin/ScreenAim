@@ -22,7 +22,7 @@ public class Worker(KeyCode key1, KeyCode key2)
         await Task.CompletedTask;
     }
 
-    //I use Thread instead of Tasks because that method faster to create and update forms
+    //--> I use Threads instead of Tasks because that method is faster for creating and updating forms
     private static void OnBindPressed()
     {
         ScreenManager.GeToNext(out var nextMonitor);

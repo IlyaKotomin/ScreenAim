@@ -7,6 +7,7 @@ internal sealed class ScreenMarker : IDisposable
 {
     private const int Height = 300;
     private const int Width = (int)(Height * 2.5);
+    private int GetProgressBar => Width - 20 - (int)((Width - 40) * ((double)_currentLifeFrame / LifeTimeFrames));
     
     private const int MaxFps = 60;
     private const int LifeTimeFrames = (int)(MaxFps * LifeTimeSeconds);
@@ -80,7 +81,6 @@ internal sealed class ScreenMarker : IDisposable
         if (_currentLifeFrame++ >= LifeTimeFrames) Dispose();
     }
 
-    private int GetProgressBar => (Width - 20) - (int)((Width - 40) * ((double)_currentLifeFrame / LifeTimeFrames));
 
     private void _window_DestroyGraphics(object? sender, DestroyGraphicsEventArgs e)
     {
