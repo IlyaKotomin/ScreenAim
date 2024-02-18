@@ -15,8 +15,6 @@ public class Worker(KeyCode key1, KeyCode key2)
     
     internal async Task RunAsync()
     {
-        Console.WriteLine("Hooking input");
-        
         _inputHook.KeyPressed += InputHookOnKeyPressed;
         _inputHook.KeyReleased += InputHookOnKeyReleased;
 
