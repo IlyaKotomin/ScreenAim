@@ -4,7 +4,7 @@ using static ScreenAim.WinApi.Win32;
 
 namespace ScreenAim.ScreenSystem;
 
-public class ScreenManager
+public static class ScreenManager
 {
     private static List<MonitorInfo> Monitors => GetMonitors();
 

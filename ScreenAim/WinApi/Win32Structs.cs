@@ -2,7 +2,7 @@
 
 namespace ScreenAim.WinApi;
 
-public class Win32Structs
+public static class Win32Structs
 {
     [StructLayout(LayoutKind.Sequential)]
     public struct Point

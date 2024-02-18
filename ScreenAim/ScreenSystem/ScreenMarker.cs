@@ -1,6 +1,5 @@
 ﻿using GameOverlay.Drawing;
 using GameOverlay.Windows;
-using ScreenAim.ScreenSystem;
 
 namespace ScreenAim.ScreenSystem;
 
@@ -68,7 +67,6 @@ internal sealed class ScreenMarker : IDisposable
     private void _window_DrawGraphics(object? sender, DrawGraphicsEventArgs e)
     {
         var gfx = e.Graphics;
-        var text = _monitorInfo.DeviceName;
         
         gfx.ClearScene();
         

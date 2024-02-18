@@ -2,7 +2,7 @@
 
 namespace ScreenAim.WinApi;
 
-public class Win32
+public static class Win32
 {
     [DllImport("user32.dll")]
     [return: MarshalAs(UnmanagedType.Bool)]
